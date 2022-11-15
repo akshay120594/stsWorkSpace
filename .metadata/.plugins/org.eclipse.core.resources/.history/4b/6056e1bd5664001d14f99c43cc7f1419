@@ -1,0 +1,49 @@
+package com.jbk.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.support.DaoSupport;
+import org.springframework.stereotype.Service;
+
+import com.jbk.dao.ProductDao;
+import com.jbk.entity.Product;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+	@Autowired
+	private ProductDao dao;
+
+	@Override
+	public boolean saveProduct(Product product) {
+		
+		return dao.saveProduct(product);
+	}
+
+	@Override
+	public Product getProduct(int productId) {
+		
+		return dao.getProduct(productId);
+	}
+
+	@Override
+	public List<Product> getAllProducts() {
+		
+		return dao.getAllProducts();
+	}
+
+	@Override
+	public boolean deleteProduct(int productId) {
+		
+		return dao.deleteProduct(productId);
+	}
+
+	@Override
+	public boolean updateProduct(Product product) {
+		
+		return dao.updateProduct(product);
+	}
+
+	
+
+}

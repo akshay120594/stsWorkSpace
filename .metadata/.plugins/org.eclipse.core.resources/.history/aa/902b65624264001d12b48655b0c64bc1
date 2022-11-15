@@ -1,0 +1,16 @@
+package com.jbk.service;
+
+import org.springframework.stereotype.Service;
+
+import com.jbk.entity.Product;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Override
+	public boolean saveProduct(Product product) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

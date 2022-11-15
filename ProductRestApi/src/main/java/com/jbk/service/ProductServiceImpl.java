@@ -1,0 +1,67 @@
+package com.jbk.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.support.DaoSupport;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.jbk.dao.ProductDao;
+import com.jbk.entity.Product;
+import com.jbk.model.Product_Supplier;
+import com.jbk.model.Supplier;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+	@Autowired
+	private ProductDao dao;
+	
+	@Autowired
+	private RestTemplate restTemplate;
+
+	@Override
+	public boolean saveProduct(Product product) {
+		
+		return dao.saveProduct(product);
+	}
+
+	@Override
+	public Product getProduct(int productId) {
+		
+		return dao.getProduct(productId);
+	}
+
+	@Override
+	public List<Product> getAllProducts() {
+		
+		return dao.getAllProducts();
+	}
+
+	@Override
+	public boolean deleteProduct(int productId) {
+		
+		return dao.deleteProduct(productId);
+	}
+
+	@Override
+	public boolean updateProduct(Product product) {
+		
+		return dao.updateProduct(product);
+	}
+
+	@Override
+	public Product_Supplier getProductWithSupplierByProductId(int productId) {
+		Product_Supplier product_Supplier=new Product_Supplier();
+		Supplier supplier=null;
+		Product product=dao.getProduct(productId);
+		product_Supplier.setProduct(product);
+		supplier=restTemplate.getForObject("http://localhost:8081/getsupplierbyid/"+product.getSupplierId(),Supplier.class);
+		product_Supplier.setSupplier(supplier);
+		return product_Supplier;
+	}
+
+	
+
+}

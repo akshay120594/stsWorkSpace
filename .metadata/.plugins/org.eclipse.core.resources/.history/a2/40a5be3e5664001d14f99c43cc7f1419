@@ -1,0 +1,39 @@
+package com.jbk.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jbk.service.SupplierService;
+
+@RestController
+public class SupplierController {
+	@Autowired
+	private SupplierService service;
+
+	@PostMapping(value = "/saveSupplier")
+	public ResponseEntity<Boolean> saveSupplier(@RequestBody Supplier supplier) {
+		boolean isAdded = service.saveSupplier(supplier);
+		if (isAdded) {
+			return new ResponseEntity<Boolean>(isAdded, HttpStatus.CREATED);
+		} else {
+			return new ResponseEntity<Boolean>(isAdded, HttpStatus.OK);
+		}
+
+	}
+
+	@GetMapping(value = "/getSupplierById/{supplierId}")
+	public ResponseEntity<Supplier> getSupplierById(@PathVariable int supplierId) {
+
+		Supplier supplier = service.getSupplier(supplierId);
+		if (supplier != null) {
+			return new ResponseEntity<Supplier>(supplier, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<Supplier>(HttpStatus.NO_CONTENT);
+
+		}
+
+	}
+
+}

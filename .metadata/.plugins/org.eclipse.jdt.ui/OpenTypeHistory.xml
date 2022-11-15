@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=ProductRestApi/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jbk.dao{ProductDao.java[ProductDao" modifiers="513" timestamp="1668456191673"/>
+    <typeInfo handle="=ProductRestApi/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jbk.service{ProductService.java[ProductService" modifiers="513" timestamp="1668455896700"/>
+    <typeInfo handle="=ProductRestApi/C:\/Users\/hp\/.m2\/repository\/org\/yaml\/snakeyaml\/1.30\/snakeyaml-1.30.jar=/maven.pomderived=/true=/=/maven.groupId=/org.yaml=/=/maven.artifactId=/snakeyaml=/=/maven.version=/1.30=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.yaml.snakeyaml.parser(Production.class[Production" modifiers="1536" timestamp="1666898694125"/>
+    <typeInfo handle="=SupplierRestApi/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jbk.dao{SupplierDao.java[SupplierDao" modifiers="513" timestamp="1668455295837"/>
+    <typeInfo handle="=SupplierRestApi/C:\/Users\/hp\/.m2\/repository\/org\/apache\/logging\/log4j\/log4j-api\/2.17.2\/log4j-api-2.17.2.jar=/maven.pomderived=/true=/=/maven.groupId=/org.apache.logging.log4j=/=/maven.artifactId=/log4j-api=/=/maven.version=/2.17.2=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.apache.logging.log4j.util(Supplier.class[Supplier" modifiers="1537" timestamp="1666898675013"/>
+    <typeInfo handle="=SupplierRestApi/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jbk.service{SupplierService.java[SupplierService" modifiers="513" timestamp="1668455326834"/>
+    <typeInfo handle="=SupplierRestApi/C:\/Users\/hp\/.m2\/repository\/org\/mockito\/mockito-core\/4.5.1\/mockito-core-4.5.1.jar=/maven.pomderived=/true=/=/test=/true=/=/maven.groupId=/org.mockito=/=/maven.artifactId=/mockito-core=/=/maven.version=/4.5.1=/=/maven.scope=/test=/=/maven.pomderived=/true=/&lt;org.mockito.internal.util(Supplier.class[Supplier" modifiers="1537" timestamp="1666899001729"/>
+</typeInfoHistroy>
